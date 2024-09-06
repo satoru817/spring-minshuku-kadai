@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<div th:replace="~{fragment::meta}"></div>
+		
+		<div th:replace="~{fragment::styles}"></div>
+		
+		<title>民宿一覧</title>
+	</head>
+	
+	<body>
+		<div class="samuraitravel-wrapper">
+			<!-- ヘッダー -->
+			<div th:replace="~{fragment::header}"></div>
+			
+			<main>
+				<div class="container samuraitravel-container pb-5">
+					<div class="row justify-content-center">
+						<nav class="my-3" style="--bs-breadcrumb-divider:'>';" aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0">
+								<li class="breadcrumb-item"><a th:href="@{/}">ホーム</a></li>
+								<li class="breadcrumb-item active" aria-current="page">民宿一覧</li>
+							</ol>
+						</nav>
+						
+						<div class="col-xl-3 col-lg-4 col-md-12">
+							<form method="get" th:action="@{/houses}" class="w-100 mb-3">
+								<div class="input-group">
+									<input type="text" class="form-control" name="keyword" th:value="${keyword}" placeholder="民宿名・目的地">
+									<button type="submit" class="btn text-white shadow-sm samuraitravel-btn">検索</button>
+								</div>
+							</form>
+							
+							<div class="card mb-3">
+								<div class="card-header">
+									エリアから探す
+								</div>
+								<div class="card-body">
+									<form method="get" th:action="@{/houses}" class="w-100">
+										<div class="form-group mb-3">
+											<select class="form-control form-select" name="area">
+												<optgroup label="北海道">
+													<option value="北海道" th:selected="${area=='北海道'}">北海道</option>
+												</optgroup>
+												<optgroup label="東北">
+													<option value="青森県" th:selected="${area=='青森県'}">青森県</option>
+													<option value="岩手県" th:selected="${area=='岩手県'}">岩手県</option>
+													<option value="宮城県" th:selected="${area=='宮城県'}" >宮城県</option>
+													<option value="秋田県" th:selected="${area=='秋田県'}">秋田県</option>
+													<option value="山形県" th:selected="${area=='山形県'}">山形県</option>
+													<option value="福島県" th:selected="${area=='福島県'}">福島県</option>
+												</optgroup>
+												<optgroup label="北関東">
+													<option value="茨城県" th:selected="${area=='茨城県'}">茨城県</option>
+													<option value="栃木県" th:selected="${area=='栃木県'}">栃木県</option>
+													<option value="群馬県" th:selected="${area=='栃木県'}">栃木県</option>
+												</optgroup>
+												<optgroup label="首都圏">
+													<option value="埼玉県" th:selected="${area=='埼玉県'}">埼玉県</option>
+													<option value="千葉県" th:selected="${area=='千葉県'}">千葉県</option>
+													<option value="東京都" th:selected="${area=='東京都'}">東京都</option>
+													<option value="神奈川県" th:selected="${area=='神奈川県'}">神奈川県</option>
+												</optgroup>
+												<optgroup label="甲信越">
+													<option value="新潟県" th:selected="${area=='新潟県'}">新潟県</option>
+													<option value="山梨県" th:selected="${area=='山梨県'}">山梨県</option>
+													<option value="長野県" th:selected="${area=='長野県'}">長野県</option>
+												</optgroup>
+												<optgroup lable="北陸">
+													<option value="富山県" th:selected="${area=='富山県'}">富山県</option>
+													<option value="石川県" th:selected="${area=='石川県'}">石川県</option>
+													<option value="福井県" th:selected="${area=='福井県'}">福井県</option>
+												</optgroup>
+												<optgroup label="東海">
+													<option value="岐阜県" th:selected="${area=='岐阜県'}">岐阜県</option>
+													<option value="静岡県" th:selected="${area=='静岡県'}">静岡県</option>
+													<option value="愛媛県" th:selected="${area=='愛知県'}">愛知県</option>
+													<option value="三重県" th:selected="${area=='三重県'}">三重県</option>
+												</optgroup>
+												<optgroup label="近畿"
+											</select>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+package com.example.samuraitravel.service;
+
+import org.springframework.stereotype.Service;
+import com.stripe.Stripe;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+@Service
+public class StripeService {
+	//セッションを作成し、Stripeに必要な情報を渡す
+	public String createStripeSession(String houseName,ReservationRegisterForm reservationRegisterForm, HttpServletRequest httpServletRequest) {
+		Stripe.apiKey = "sk_test_51Pv9EXRopxX1etdHpOX9I6LFcIL8fasUHAo3TzizLPhSpZ3IQCrN1h0QIIf4hFL00kFfDCleOEKetmtzj1U6rG0d001LdbyHaO";
+		String requestUrl = new String(httpServletRequest.getRequestURL());
+		
+	}
+
+}

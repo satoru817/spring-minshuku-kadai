@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/templates/admin/houses/edit.html=UTF-8
+encoding//src/main/resources/templates/admin/houses/index.html=UTF-8
+encoding//src/main/resources/templates/admin/houses/register.html=UTF-8
+encoding//src/main/resources/templates/admin/houses/show.html=UTF-8
+encoding//src/main/resources/templates/auth/login.html=UTF-8
+encoding//src/main/resources/templates/auth/signup.html=UTF-8
+encoding//src/main/resources/templates/houses/index.html=UTF-8
+encoding//src/main/resources/templates/index.html=UTF-8
+encoding//src/main/resources/templates/user/edit.html=UTF-8
+encoding//src/main/resources/templates/user/index.html=UTF-8
+encoding//src/test/java=UTF-8
+encoding/<project>=UTF-8

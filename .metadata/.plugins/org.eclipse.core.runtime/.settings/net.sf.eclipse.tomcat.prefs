@@ -1,0 +1,8 @@
+contextsDir=/home/satoru/tomcat-native-1.2.34-src/conf/Catalina/localhost
+eclipse.preferences.version=1
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=samuraitravel;
+tomcatConfigFile=/home/satoru/tomcat-native-1.2.34-src/conf/server.xml
+tomcatDir=/home/satoru/tomcat-native-1.2.34-src
+tomcatJRE=1723163406154
+tomcatVersion=tomcatV9
